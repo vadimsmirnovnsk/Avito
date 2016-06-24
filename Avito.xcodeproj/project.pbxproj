@@ -13,6 +13,20 @@
 		3028D88B1D1DC30E00A6AC1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3028D88A1D1DC30E00A6AC1B /* Assets.xcassets */; };
 		3028D88E1D1DC30E00A6AC1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3028D88C1D1DC30E00A6AC1B /* LaunchScreen.storyboard */; };
 		3028D8991D1DC30E00A6AC1B /* AvitoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8981D1DC30E00A6AC1B /* AvitoTests.m */; };
+		3028D8AA1D1DC5D600A6AC1B /* AVTBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8A91D1DC5D600A6AC1B /* AVTBaseVC.m */; };
+		3028D8AD1D1DC73B00A6AC1B /* AVTBaseVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8AC1D1DC73B00A6AC1B /* AVTBaseVM.m */; };
+		3028D8B01D1DC76200A6AC1B /* AVTRootVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8AF1D1DC76200A6AC1B /* AVTRootVM.m */; };
+		3028D8B41D1DC8BB00A6AC1B /* AVTAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8B31D1DC8BB00A6AC1B /* AVTAPIController.m */; };
+		3028D8B81D1DCA0F00A6AC1B /* AVTAPIController+Entities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8B71D1DCA0F00A6AC1B /* AVTAPIController+Entities.m */; };
+		3028D8BE1D1DCC7100A6AC1B /* AVTAppleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8BD1D1DCC7100A6AC1B /* AVTAppleItem.m */; };
+		3028D8C11D1DCCD000A6AC1B /* AVTGitHubItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8C01D1DCCD000A6AC1B /* AVTGitHubItem.m */; };
+		3028D8C61D1DCFE400A6AC1B /* AVTTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8C51D1DCFE400A6AC1B /* AVTTableViewHeaderFooterView.m */; };
+		3028D8C91D1DD08F00A6AC1B /* AVTSearchHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8C81D1DD08F00A6AC1B /* AVTSearchHeaderView.m */; };
+		3028D8CC1D1DD0C200A6AC1B /* AVTSearchVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8CB1D1DD0C200A6AC1B /* AVTSearchVM.m */; };
+		3028D8CF1D1DD12100A6AC1B /* AVTTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8CE1D1DD12100A6AC1B /* AVTTableViewCell.m */; };
+		3028D8D21D1DD1D200A6AC1B /* AVTResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8D11D1DD1D200A6AC1B /* AVTResultCell.m */; };
+		3028D8D51D1DD1F700A6AC1B /* AVTResultCellVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8D41D1DD1F700A6AC1B /* AVTResultCellVM.m */; };
+		3028D8DB1D1DD46D00A6AC1B /* AVTResultsVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8DA1D1DD46D00A6AC1B /* AVTResultsVM.m */; };
 		895B7CA96A097F415632A78B /* libPods-Avito.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0D7FB2D4B04C1A01BEE089 /* libPods-Avito.a */; };
 		EB8E607CAD4EB637C02E0EDB /* libPods-AvitoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A2B22E8BF0F044E728F027 /* libPods-AvitoTests.a */; };
 /* End PBXBuildFile section */
@@ -43,6 +57,36 @@
 		3028D8981D1DC30E00A6AC1B /* AvitoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvitoTests.m; sourceTree = "<group>"; };
 		3028D89A1D1DC30E00A6AC1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3028D8A31D1DC40800A6AC1B /* Prefix-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Prefix-Header.h"; sourceTree = "<group>"; };
+		3028D8A81D1DC5D600A6AC1B /* AVTBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTBaseVC.h; sourceTree = "<group>"; };
+		3028D8A91D1DC5D600A6AC1B /* AVTBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTBaseVC.m; sourceTree = "<group>"; };
+		3028D8AB1D1DC73B00A6AC1B /* AVTBaseVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTBaseVM.h; sourceTree = "<group>"; };
+		3028D8AC1D1DC73B00A6AC1B /* AVTBaseVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTBaseVM.m; sourceTree = "<group>"; };
+		3028D8AE1D1DC76200A6AC1B /* AVTRootVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTRootVM.h; sourceTree = "<group>"; };
+		3028D8AF1D1DC76200A6AC1B /* AVTRootVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTRootVM.m; sourceTree = "<group>"; };
+		3028D8B21D1DC8BB00A6AC1B /* AVTAPIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTAPIController.h; sourceTree = "<group>"; };
+		3028D8B31D1DC8BB00A6AC1B /* AVTAPIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTAPIController.m; sourceTree = "<group>"; };
+		3028D8B51D1DC92000A6AC1B /* AVTDataProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTDataProviderProtocol.h; sourceTree = "<group>"; };
+		3028D8B61D1DCA0F00A6AC1B /* AVTAPIController+Entities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVTAPIController+Entities.h"; sourceTree = "<group>"; };
+		3028D8B71D1DCA0F00A6AC1B /* AVTAPIController+Entities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVTAPIController+Entities.m"; sourceTree = "<group>"; };
+		3028D8BA1D1DCB9000A6AC1B /* AVTSerializableProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTSerializableProtocol.h; sourceTree = "<group>"; };
+		3028D8BC1D1DCC7100A6AC1B /* AVTAppleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTAppleItem.h; sourceTree = "<group>"; };
+		3028D8BD1D1DCC7100A6AC1B /* AVTAppleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTAppleItem.m; sourceTree = "<group>"; };
+		3028D8BF1D1DCCD000A6AC1B /* AVTGitHubItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTGitHubItem.h; sourceTree = "<group>"; };
+		3028D8C01D1DCCD000A6AC1B /* AVTGitHubItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTGitHubItem.m; sourceTree = "<group>"; };
+		3028D8C41D1DCFE400A6AC1B /* AVTTableViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTTableViewHeaderFooterView.h; sourceTree = "<group>"; };
+		3028D8C51D1DCFE400A6AC1B /* AVTTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTTableViewHeaderFooterView.m; sourceTree = "<group>"; };
+		3028D8C71D1DD08F00A6AC1B /* AVTSearchHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTSearchHeaderView.h; sourceTree = "<group>"; };
+		3028D8C81D1DD08F00A6AC1B /* AVTSearchHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTSearchHeaderView.m; sourceTree = "<group>"; };
+		3028D8CA1D1DD0C200A6AC1B /* AVTSearchVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTSearchVM.h; sourceTree = "<group>"; };
+		3028D8CB1D1DD0C200A6AC1B /* AVTSearchVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTSearchVM.m; sourceTree = "<group>"; };
+		3028D8CD1D1DD12100A6AC1B /* AVTTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTTableViewCell.h; sourceTree = "<group>"; };
+		3028D8CE1D1DD12100A6AC1B /* AVTTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTTableViewCell.m; sourceTree = "<group>"; };
+		3028D8D01D1DD1D200A6AC1B /* AVTResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTResultCell.h; sourceTree = "<group>"; };
+		3028D8D11D1DD1D200A6AC1B /* AVTResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTResultCell.m; sourceTree = "<group>"; };
+		3028D8D31D1DD1F700A6AC1B /* AVTResultCellVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTResultCellVM.h; sourceTree = "<group>"; };
+		3028D8D41D1DD1F700A6AC1B /* AVTResultCellVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTResultCellVM.m; sourceTree = "<group>"; };
+		3028D8D91D1DD46D00A6AC1B /* AVTResultsVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTResultsVM.h; sourceTree = "<group>"; };
+		3028D8DA1D1DD46D00A6AC1B /* AVTResultsVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTResultsVM.m; sourceTree = "<group>"; };
 		49A2B22E8BF0F044E728F027 /* libPods-AvitoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AvitoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0D7FB2D4B04C1A01BEE089 /* libPods-Avito.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Avito.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7B2E45B83B1D2A235009C4 /* Pods-AvitoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvitoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AvitoTests/Pods-AvitoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,13 +147,12 @@
 		3028D87D1D1DC30E00A6AC1B /* Avito */ = {
 			isa = PBXGroup;
 			children = (
+				3028D8B91D1DCB7500A6AC1B /* Entities */,
+				3028D8B11D1DC89300A6AC1B /* Networking */,
+				3028D8A71D1DC58A00A6AC1B /* Utils */,
+				3028D8A51D1DC56D00A6AC1B /* Views */,
 				3028D8811D1DC30E00A6AC1B /* AppDelegate.h */,
 				3028D8821D1DC30E00A6AC1B /* AppDelegate.m */,
-				3028D8841D1DC30E00A6AC1B /* AVTRootVC.h */,
-				3028D8851D1DC30E00A6AC1B /* AVTRootVC.m */,
-				3028D88A1D1DC30E00A6AC1B /* Assets.xcassets */,
-				3028D88C1D1DC30E00A6AC1B /* LaunchScreen.storyboard */,
-				3028D88F1D1DC30E00A6AC1B /* Info.plist */,
 				3028D87E1D1DC30E00A6AC1B /* Supporting Files */,
 			);
 			path = Avito;
@@ -118,6 +161,9 @@
 		3028D87E1D1DC30E00A6AC1B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3028D88A1D1DC30E00A6AC1B /* Assets.xcassets */,
+				3028D88C1D1DC30E00A6AC1B /* LaunchScreen.storyboard */,
+				3028D88F1D1DC30E00A6AC1B /* Info.plist */,
 				3028D8A31D1DC40800A6AC1B /* Prefix-Header.h */,
 				3028D87F1D1DC30E00A6AC1B /* main.m */,
 			);
@@ -131,6 +177,90 @@
 				3028D89A1D1DC30E00A6AC1B /* Info.plist */,
 			);
 			path = AvitoTests;
+			sourceTree = "<group>";
+		};
+		3028D8A51D1DC56D00A6AC1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3028D8A61D1DC57700A6AC1B /* Root */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3028D8A61D1DC57700A6AC1B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				3028D8C21D1DCD5200A6AC1B /* SearchHeader */,
+				3028D8C31D1DCD6200A6AC1B /* ResultCell */,
+				3028D8841D1DC30E00A6AC1B /* AVTRootVC.h */,
+				3028D8851D1DC30E00A6AC1B /* AVTRootVC.m */,
+				3028D8AE1D1DC76200A6AC1B /* AVTRootVM.h */,
+				3028D8AF1D1DC76200A6AC1B /* AVTRootVM.m */,
+				3028D8D91D1DD46D00A6AC1B /* AVTResultsVM.h */,
+				3028D8DA1D1DD46D00A6AC1B /* AVTResultsVM.m */,
+				3028D8CA1D1DD0C200A6AC1B /* AVTSearchVM.h */,
+				3028D8CB1D1DD0C200A6AC1B /* AVTSearchVM.m */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		3028D8A71D1DC58A00A6AC1B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3028D8A81D1DC5D600A6AC1B /* AVTBaseVC.h */,
+				3028D8A91D1DC5D600A6AC1B /* AVTBaseVC.m */,
+				3028D8AB1D1DC73B00A6AC1B /* AVTBaseVM.h */,
+				3028D8AC1D1DC73B00A6AC1B /* AVTBaseVM.m */,
+				3028D8C41D1DCFE400A6AC1B /* AVTTableViewHeaderFooterView.h */,
+				3028D8C51D1DCFE400A6AC1B /* AVTTableViewHeaderFooterView.m */,
+				3028D8CD1D1DD12100A6AC1B /* AVTTableViewCell.h */,
+				3028D8CE1D1DD12100A6AC1B /* AVTTableViewCell.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3028D8B11D1DC89300A6AC1B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3028D8B21D1DC8BB00A6AC1B /* AVTAPIController.h */,
+				3028D8B31D1DC8BB00A6AC1B /* AVTAPIController.m */,
+				3028D8B61D1DCA0F00A6AC1B /* AVTAPIController+Entities.h */,
+				3028D8B71D1DCA0F00A6AC1B /* AVTAPIController+Entities.m */,
+				3028D8B51D1DC92000A6AC1B /* AVTDataProviderProtocol.h */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		3028D8B91D1DCB7500A6AC1B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3028D8BC1D1DCC7100A6AC1B /* AVTAppleItem.h */,
+				3028D8BD1D1DCC7100A6AC1B /* AVTAppleItem.m */,
+				3028D8BF1D1DCCD000A6AC1B /* AVTGitHubItem.h */,
+				3028D8C01D1DCCD000A6AC1B /* AVTGitHubItem.m */,
+				3028D8BA1D1DCB9000A6AC1B /* AVTSerializableProtocol.h */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		3028D8C21D1DCD5200A6AC1B /* SearchHeader */ = {
+			isa = PBXGroup;
+			children = (
+				3028D8C71D1DD08F00A6AC1B /* AVTSearchHeaderView.h */,
+				3028D8C81D1DD08F00A6AC1B /* AVTSearchHeaderView.m */,
+			);
+			name = SearchHeader;
+			sourceTree = "<group>";
+		};
+		3028D8C31D1DCD6200A6AC1B /* ResultCell */ = {
+			isa = PBXGroup;
+			children = (
+				3028D8D01D1DD1D200A6AC1B /* AVTResultCell.h */,
+				3028D8D11D1DD1D200A6AC1B /* AVTResultCell.m */,
+				3028D8D31D1DD1F700A6AC1B /* AVTResultCellVM.h */,
+				3028D8D41D1DD1F700A6AC1B /* AVTResultCellVM.m */,
+			);
+			name = ResultCell;
 			sourceTree = "<group>";
 		};
 		8BE8BB1C53CA34A70E0ABCDC /* Frameworks */ = {
@@ -340,9 +470,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3028D8B01D1DC76200A6AC1B /* AVTRootVM.m in Sources */,
+				3028D8C61D1DCFE400A6AC1B /* AVTTableViewHeaderFooterView.m in Sources */,
+				3028D8C11D1DCCD000A6AC1B /* AVTGitHubItem.m in Sources */,
+				3028D8AD1D1DC73B00A6AC1B /* AVTBaseVM.m in Sources */,
+				3028D8B41D1DC8BB00A6AC1B /* AVTAPIController.m in Sources */,
+				3028D8D51D1DD1F700A6AC1B /* AVTResultCellVM.m in Sources */,
+				3028D8CC1D1DD0C200A6AC1B /* AVTSearchVM.m in Sources */,
 				3028D8861D1DC30E00A6AC1B /* AVTRootVC.m in Sources */,
+				3028D8BE1D1DCC7100A6AC1B /* AVTAppleItem.m in Sources */,
+				3028D8DB1D1DD46D00A6AC1B /* AVTResultsVM.m in Sources */,
+				3028D8D21D1DD1D200A6AC1B /* AVTResultCell.m in Sources */,
+				3028D8AA1D1DC5D600A6AC1B /* AVTBaseVC.m in Sources */,
 				3028D8831D1DC30E00A6AC1B /* AppDelegate.m in Sources */,
+				3028D8C91D1DD08F00A6AC1B /* AVTSearchHeaderView.m in Sources */,
 				3028D8801D1DC30E00A6AC1B /* main.m in Sources */,
+				3028D8B81D1DCA0F00A6AC1B /* AVTAPIController+Entities.m in Sources */,
+				3028D8CF1D1DD12100A6AC1B /* AVTTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

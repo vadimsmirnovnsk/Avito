@@ -12,8 +12,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-	self.window.rootViewController = [[AVTRootVC alloc] init];
+
+	AVTRootVM *rootVM = [[AVTRootVM alloc] init];
+	self.window.rootViewController = [[AVTRootVC alloc] initWithViewModel:rootVM];
 	[self.window makeKeyAndVisible];
+
 	return YES;
 }
 

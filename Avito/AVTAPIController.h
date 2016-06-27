@@ -7,6 +7,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AVTAPIController : NSObject
 
+/*! \sendNext NSError */
+@property (nonatomic, strong, readonly) RACSignal *didOccurNetworkErrorSignal;
+
 /*! \return NSDictionary */
 - (RACSignal *)GET:(NSString *)method service:(AVTService)service params:(NSDictionary *_Nullable)params;
 

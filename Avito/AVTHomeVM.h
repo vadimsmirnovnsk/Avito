@@ -9,11 +9,11 @@
 @interface AVTHomeVM : AVTBaseVM
 
 @property (nonatomic, strong, readonly) AVTSearchVM *searchVM;
+@property (nonatomic, strong, readonly) AVTSelectVM *selectVM;
 // sendNext @YES
 @property (nonatomic, strong, readonly) RACSignal *shouldReloadTableViewSignal;
 
-- (instancetype)initWithDataProvider:(id<AVTDataProviderProtocol>)dataProvider
-				 selectServiceSignal:(RACSignal *)selectServiceSignal;
+- (instancetype)initWithDataProvider:(id<AVTDataProviderProtocol>)dataProvider;
 
 - (void)registerTableView:(UITableView *)tableView;
 

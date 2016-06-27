@@ -33,6 +33,9 @@
 		3028D8EC1D1DDE5500A6AC1B /* AVTHomeVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8EB1D1DDE5500A6AC1B /* AVTHomeVM.m */; };
 		3028D8EF1D1DE41E00A6AC1B /* AVTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8EE1D1DE41E00A6AC1B /* AVTTextField.m */; };
 		3028D8F21D1DE46600A6AC1B /* UIColor+DGSCustomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8F11D1DE46600A6AC1B /* UIColor+DGSCustomColor.m */; };
+		30999BC11D21BA35009F6B04 /* DGSErrorBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30999BC01D21BA35009F6B04 /* DGSErrorBannerView.m */; };
+		30999BC71D21BA52009F6B04 /* DGSErrorBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30999BC41D21BA52009F6B04 /* DGSErrorBannerModel.m */; };
+		30999BC81D21BA52009F6B04 /* DGSErrorBannerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 30999BC61D21BA52009F6B04 /* DGSErrorBannerVM.m */; };
 		895B7CA96A097F415632A78B /* libPods-Avito.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0D7FB2D4B04C1A01BEE089 /* libPods-Avito.a */; };
 		EB8E607CAD4EB637C02E0EDB /* libPods-AvitoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A2B22E8BF0F044E728F027 /* libPods-AvitoTests.a */; };
 /* End PBXBuildFile section */
@@ -106,6 +109,12 @@
 		3028D8EE1D1DE41E00A6AC1B /* AVTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTTextField.m; sourceTree = "<group>"; };
 		3028D8F01D1DE46600A6AC1B /* UIColor+DGSCustomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DGSCustomColor.h"; sourceTree = "<group>"; };
 		3028D8F11D1DE46600A6AC1B /* UIColor+DGSCustomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DGSCustomColor.m"; sourceTree = "<group>"; };
+		30999BBF1D21BA35009F6B04 /* DGSErrorBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGSErrorBannerView.h; sourceTree = "<group>"; };
+		30999BC01D21BA35009F6B04 /* DGSErrorBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGSErrorBannerView.m; sourceTree = "<group>"; };
+		30999BC31D21BA52009F6B04 /* DGSErrorBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGSErrorBannerModel.h; sourceTree = "<group>"; };
+		30999BC41D21BA52009F6B04 /* DGSErrorBannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGSErrorBannerModel.m; sourceTree = "<group>"; };
+		30999BC51D21BA52009F6B04 /* DGSErrorBannerVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGSErrorBannerVM.h; sourceTree = "<group>"; };
+		30999BC61D21BA52009F6B04 /* DGSErrorBannerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGSErrorBannerVM.m; sourceTree = "<group>"; };
 		49A2B22E8BF0F044E728F027 /* libPods-AvitoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AvitoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0D7FB2D4B04C1A01BEE089 /* libPods-Avito.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Avito.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7B2E45B83B1D2A235009C4 /* Pods-AvitoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvitoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AvitoTests/Pods-AvitoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +209,7 @@
 		3028D8A51D1DC56D00A6AC1B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				30999BC21D21BA3D009F6B04 /* ErrorBanner */,
 				3028D8DF1D1DD66800A6AC1B /* Home */,
 				3028D8A61D1DC57700A6AC1B /* Root */,
 			);
@@ -309,6 +319,19 @@
 				3028D8DD1D1DD61C00A6AC1B /* AVTSelectVM.m */,
 			);
 			name = SelectView;
+			sourceTree = "<group>";
+		};
+		30999BC21D21BA3D009F6B04 /* ErrorBanner */ = {
+			isa = PBXGroup;
+			children = (
+				30999BC31D21BA52009F6B04 /* DGSErrorBannerModel.h */,
+				30999BC41D21BA52009F6B04 /* DGSErrorBannerModel.m */,
+				30999BC51D21BA52009F6B04 /* DGSErrorBannerVM.h */,
+				30999BC61D21BA52009F6B04 /* DGSErrorBannerVM.m */,
+				30999BBF1D21BA35009F6B04 /* DGSErrorBannerView.h */,
+				30999BC01D21BA35009F6B04 /* DGSErrorBannerView.m */,
+			);
+			name = ErrorBanner;
 			sourceTree = "<group>";
 		};
 		8BE8BB1C53CA34A70E0ABCDC /* Frameworks */ = {
@@ -519,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3028D8DE1D1DD61C00A6AC1B /* AVTSelectVM.m in Sources */,
+				30999BC81D21BA52009F6B04 /* DGSErrorBannerVM.m in Sources */,
 				3028D8E21D1DD98000A6AC1B /* AVTSelectView.m in Sources */,
 				3028D8EF1D1DE41E00A6AC1B /* AVTTextField.m in Sources */,
 				3028D8B01D1DC76200A6AC1B /* AVTRootVM.m in Sources */,
@@ -537,7 +561,9 @@
 				3028D8EC1D1DDE5500A6AC1B /* AVTHomeVM.m in Sources */,
 				3028D8831D1DC30E00A6AC1B /* AppDelegate.m in Sources */,
 				3028D8C91D1DD08F00A6AC1B /* AVTSearchHeaderView.m in Sources */,
+				30999BC71D21BA52009F6B04 /* DGSErrorBannerModel.m in Sources */,
 				3028D8F21D1DE46600A6AC1B /* UIColor+DGSCustomColor.m in Sources */,
+				30999BC11D21BA35009F6B04 /* DGSErrorBannerView.m in Sources */,
 				3028D8801D1DC30E00A6AC1B /* main.m in Sources */,
 				3028D8B81D1DCA0F00A6AC1B /* AVTAPIController+Entities.m in Sources */,
 				3028D8CF1D1DD12100A6AC1B /* AVTTableViewCell.m in Sources */,

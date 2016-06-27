@@ -10,6 +10,7 @@ static NSString *const kAVTBaseURLStringGitHub = @"https://api.github.com/";
 @property (nonatomic, strong, readonly) AFHTTPRequestOperationManager *requestManagerApple;
 @property (nonatomic, strong, readonly) AFHTTPRequestOperationManager *requestManagerGitHub;
 @property (nonatomic, strong, readonly) NSCache *imageCache;
+@property (nonatomic, strong, readonly) RACSubject *didOccurNetworkErrorSubject;
 
 @end
 
@@ -25,7 +26,15 @@ static NSString *const kAVTBaseURLStringGitHub = @"https://api.github.com/";
 	
 	_imageCache = [[NSCache alloc] init];
 
+	_didOccurNetworkErrorSubject = [RACSubject subject];
+	_didOccurNetworkErrorSignal = _didOccurNetworkErrorSubject;
+
 	return self;
+}
+
+- (void)dealloc
+{
+	[self.didOccurNetworkErrorSubject sendCompleted];
 }
 
 + (AFHTTPRequestOperationManager *)requestManagerWithURLString:(NSString *)urlString
@@ -46,7 +55,7 @@ static NSString *const kAVTBaseURLStringGitHub = @"https://api.github.com/";
 - (RACSignal *)GET:(NSString *)method service:(AVTService)service params:(NSDictionary *)params
 {
 	@weakify(self);
-	return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+	return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
 		@strongify(self);
 
 		id successBlock = ^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -67,6 +76,11 @@ static NSString *const kAVTBaseURLStringGitHub = @"https://api.github.com/";
 		return [RACDisposable disposableWithBlock:^{
 			[operation cancel];
 		}];
+	}]
+	doError:^(NSError *error) {
+		@strongify(self);
+
+		[self.didOccurNetworkErrorSubject sendNext:error];
 	}];
 }
 

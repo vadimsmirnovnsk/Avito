@@ -5,6 +5,7 @@
 #import "AVTSearchHeaderView.h"
 #import "AVTResultCell.h"
 #import "AVTResultsVM.h"
+#import "AVTSelectVM.h"
 
 @interface AVTHomeVM () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
@@ -12,14 +13,12 @@
 @property (nonatomic, strong, readonly) AVTResultsVM *resultsVM;
 @property (nonatomic, copy, readonly) NSString *searchHeaderIdentifier;
 @property (nonatomic, copy, readonly) NSString *resultCellIdentifier;
-@property (nonatomic, strong, readonly) RACSignal *selectServiceSignal;
 
 @end
 
 @implementation AVTHomeVM
 
 - (instancetype)initWithDataProvider:(id<AVTDataProviderProtocol>)dataProvider
-				 selectServiceSignal:(RACSignal *)selectServiceSignal
 {
 	self = [super init];
 	if (self == nil) return nil;
@@ -27,11 +26,11 @@
 	_dataProvider = dataProvider;
 
 	_searchVM = [[AVTSearchVM alloc] init];
+	_selectVM = [[AVTSelectVM alloc] init];
 	_resultsVM = [[AVTResultsVM alloc] initWithDataProvider:dataProvider];
 	
 	_searchHeaderIdentifier = NSStringFromClass([AVTSearchVM class]);
 	_resultCellIdentifier = NSStringFromClass([AVTResultCellVM class]);
-	_selectServiceSignal = selectServiceSignal;
 
 	[self setupReactiveStuff];
 
@@ -46,7 +45,9 @@
 		ignore:nil]
 		distinctUntilChanged];
 
-	[[[self.selectServiceSignal combineLatestWith:textSinal]
+	RACSignal *selectServiceSignal = [RACObserve(self.selectVM, selectedIndex) ignore:nil];
+
+	[[[selectServiceSignal combineLatestWith:textSinal]
 		flattenMap:^RACStream *(RACTuple *tuple) {
 			@strongify(self);
 

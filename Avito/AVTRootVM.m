@@ -4,12 +4,6 @@
 #import "AVTHomeVM.h"
 #import "AVTSelectVM.h"
 
-@interface AVTRootVM ()
-
-@property (nonatomic, strong, readonly) AVTAPIController *apiController;
-
-@end
-
 @implementation AVTRootVM
 
 - (instancetype)init
@@ -18,17 +12,9 @@
 	if (self == nil) return nil;
 
 	_apiController = [[AVTAPIController alloc] init];
-	[self assembleViewModels];
+	_homeVM = [[AVTHomeVM alloc] initWithDataProvider:_apiController];
 
 	return self;
-}
-
-- (void)assembleViewModels
-{
-	_selectVM = [[AVTSelectVM alloc] init];
-
-	RACSignal *selectServiceSignal = RACObserve(self.selectVM, selectedIndex);
-	_homeVM = [[AVTHomeVM alloc] initWithDataProvider:_apiController selectServiceSignal:selectServiceSignal];
 }
 
 - (void)cleanCache

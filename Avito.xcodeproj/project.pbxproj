@@ -16,7 +16,6 @@
 		3028D8AD1D1DC73B00A6AC1B /* AVTBaseVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8AC1D1DC73B00A6AC1B /* AVTBaseVM.m */; };
 		3028D8B01D1DC76200A6AC1B /* AVTRootVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8AF1D1DC76200A6AC1B /* AVTRootVM.m */; };
 		3028D8B41D1DC8BB00A6AC1B /* AVTAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8B31D1DC8BB00A6AC1B /* AVTAPIController.m */; };
-		3028D8B81D1DCA0F00A6AC1B /* AVTAPIController+Entities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8B71D1DCA0F00A6AC1B /* AVTAPIController+Entities.m */; };
 		3028D8BE1D1DCC7100A6AC1B /* AVTAppleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8BD1D1DCC7100A6AC1B /* AVTAppleItem.m */; };
 		3028D8C11D1DCCD000A6AC1B /* AVTGitHubItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8C01D1DCCD000A6AC1B /* AVTGitHubItem.m */; };
 		3028D8C61D1DCFE400A6AC1B /* AVTTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8C51D1DCFE400A6AC1B /* AVTTableViewHeaderFooterView.m */; };
@@ -74,8 +73,6 @@
 		3028D8B21D1DC8BB00A6AC1B /* AVTAPIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTAPIController.h; sourceTree = "<group>"; };
 		3028D8B31D1DC8BB00A6AC1B /* AVTAPIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTAPIController.m; sourceTree = "<group>"; };
 		3028D8B51D1DC92000A6AC1B /* AVTDataProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTDataProviderProtocol.h; sourceTree = "<group>"; };
-		3028D8B61D1DCA0F00A6AC1B /* AVTAPIController+Entities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVTAPIController+Entities.h"; sourceTree = "<group>"; };
-		3028D8B71D1DCA0F00A6AC1B /* AVTAPIController+Entities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVTAPIController+Entities.m"; sourceTree = "<group>"; };
 		3028D8BA1D1DCB9000A6AC1B /* AVTSerializableProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTSerializableProtocol.h; sourceTree = "<group>"; };
 		3028D8BC1D1DCC7100A6AC1B /* AVTAppleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTAppleItem.h; sourceTree = "<group>"; };
 		3028D8BD1D1DCC7100A6AC1B /* AVTAppleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTAppleItem.m; sourceTree = "<group>"; };
@@ -252,8 +249,6 @@
 			children = (
 				3028D8B21D1DC8BB00A6AC1B /* AVTAPIController.h */,
 				3028D8B31D1DC8BB00A6AC1B /* AVTAPIController.m */,
-				3028D8B61D1DCA0F00A6AC1B /* AVTAPIController+Entities.h */,
-				3028D8B71D1DCA0F00A6AC1B /* AVTAPIController+Entities.m */,
 				3028D8B51D1DC92000A6AC1B /* AVTDataProviderProtocol.h */,
 			);
 			name = Networking;
@@ -565,7 +560,6 @@
 				3028D8F21D1DE46600A6AC1B /* UIColor+DGSCustomColor.m in Sources */,
 				30999BC11D21BA35009F6B04 /* DGSErrorBannerView.m in Sources */,
 				3028D8801D1DC30E00A6AC1B /* main.m in Sources */,
-				3028D8B81D1DCA0F00A6AC1B /* AVTAPIController+Entities.m in Sources */,
 				3028D8CF1D1DD12100A6AC1B /* AVTTableViewCell.m in Sources */,
 				3028D8E61D1DDDCE00A6AC1B /* UIViewController+DGSAdditions.m in Sources */,
 			);

@@ -1,3 +1,5 @@
+#import "AVTDataProviderProtocol.h"
+
 typedef NS_ENUM(NSUInteger, AVTService) {
 	AVTServiceApple = 0,
 	AVTServiceGitHub = 1,
@@ -5,7 +7,7 @@ typedef NS_ENUM(NSUInteger, AVTService) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AVTAPIController : NSObject
+@interface AVTAPIController : NSObject <AVTDataProviderProtocol>
 
 /*! \sendNext NSError */
 @property (nonatomic, strong, readonly) RACSignal *didOccurNetworkErrorSignal;

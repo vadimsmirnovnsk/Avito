@@ -1,5 +1,7 @@
 #import "AVTAPIController.h"
 
+#import "AVTAppleItem.h"
+#import "AVTGitHubItem.h"
 #import <AFNetworking/AFNetworking.h>
 
 static NSString *const kAVTBaseURLStringApple = @"http://itunes.apple.com/";
@@ -40,7 +42,7 @@ static NSString *const kAVTBaseURLStringGitHub = @"https://api.github.com/";
 + (AFHTTPRequestOperationManager *)requestManagerWithURLString:(NSString *)urlString
 {
 	AFHTTPRequestOperationManager *manager =
-	[[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:urlString]];
+		[[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:urlString]];
 
 	manager.requestSerializer = [AFJSONRequestSerializer serializer];
 	manager.requestSerializer.timeoutInterval = 30.0;
@@ -55,6 +57,7 @@ static NSString *const kAVTBaseURLStringGitHub = @"https://api.github.com/";
 - (RACSignal *)GET:(NSString *)method service:(AVTService)service params:(NSDictionary *)params
 {
 	@weakify(self);
+	
 	return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
 		@strongify(self);
 
@@ -123,6 +126,130 @@ static NSString *const kAVTBaseURLStringGitHub = @"https://api.github.com/";
 	}
 
 	return nil;
+}
+
+// MARK: AVTDataProviderProtocol
+
+// https://itunes.apple.com/search?term=Check&country=us&entity=software&genreId=6001
+// itunes.apple.com/search?term=jack+johnson
+- (RACSignal *)fetchAppleItemsForQuery:(NSString *)query
+{
+	@weakify(self);
+
+	if (query.length == 0) return [RACSignal return:@[]];
+
+	NSString *queryWithoutSpaces = [query stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+	NSDictionary *params = @{
+		@"term" : queryWithoutSpaces,
+	};
+	return [[[[self GET:@"search" service:AVTServiceApple params:params]
+		map:^NSArray<AVTAppleItem *> *(NSDictionary *responseObject) {
+			NSArray<AVTAppleItem *> *returnItems = nil;
+
+			if ([responseObject isKindOfClass:[NSDictionary class]])
+			{
+				NSArray *itemDictionaries = responseObject[@"results"];
+
+				returnItems = [itemDictionaries.rac_sequence
+					map:^AVTAppleItem *(NSDictionary *itemDictionary) {
+						return[[AVTAppleItem alloc] initWithDictionary:itemDictionary];
+					}].array;
+			}
+
+			return returnItems;
+		}]
+		flattenMap:^RACStream *(NSArray *results) {
+			@strongify(self);
+
+			return [self checkedForEmptyResultsSignal:results];
+		}]
+		catchTo:[RACSignal return:nil]];
+}
+
+// api.github.com/search/users?q=tom
+- (RACSignal *)fetchGitHubItemsForQuery:(NSString *)query
+{
+	@weakify(self);
+
+	if (query.length == 0) return [RACSignal return:@[]];
+
+	NSDictionary *params = @{
+		@"q" : query,
+	};
+	return [[[[self GET:@"search/users" service:AVTServiceGitHub params:params]
+		map:^NSArray<AVTGitHubItem *> *(NSDictionary *responseObject) {
+			NSArray<AVTGitHubItem *> *returnItems = nil;
+
+			if ([responseObject isKindOfClass:[NSDictionary class]])
+			{
+				NSArray *itemDictionaries = responseObject[@"items"];
+
+				returnItems = [itemDictionaries.rac_sequence
+					map:^AVTGitHubItem *(NSDictionary *itemDictionary) {
+						return[[AVTGitHubItem alloc] initWithDictionary:itemDictionary];
+					}].array;
+			}
+
+			return returnItems;
+		}]
+		flattenMap:^RACStream *(NSArray *results) {
+			@strongify(self);
+
+			return [self checkedForEmptyResultsSignal:results];
+		}]
+		catchTo:[RACSignal return:nil]];
+}
+
+- (RACSignal *)fetchImageDataForURL:(NSURL *)imageURL
+{
+	NSCParameterAssert(imageURL);
+
+	@weakify(self);
+
+	NSData *cachedImageData = [self cachedDataForKey:imageURL.absoluteString];
+
+	if (cachedImageData)
+	{
+		return [RACSignal return:cachedImageData];
+	}
+	else
+	{
+		return [[[NSData rac_readContentsOfURL:imageURL
+									   options:NSDataReadingMappedIfSafe
+									 scheduler:[RACScheduler scheduler]]
+			doNext:^(NSData *imageData) {
+				@strongify(self);
+
+				if (imageData.length > 0)
+				{
+					[self setCachedData:imageData forKey:imageURL.absoluteString];
+				}
+			}]
+			flattenMap:^RACStream *(NSData *imageData) {
+				return imageData.length > 0
+					? [RACSignal return:imageData]
+					: [RACSignal error:nil];
+			}];
+	}
+}
+
+// MARK: Helper Signals
+
+- (RACSignal *)checkedForEmptyResultsSignal:(NSArray *)results
+{
+	if (results.count == 0)
+	{
+		[self.didOccurNetworkErrorSubject sendNext:[self errorWithMessage:@"Ничего не нашлось ='("]];
+	}
+
+	return [RACSignal return:results];
+}
+
+- (NSError *)errorWithMessage:(NSString *)message
+{
+	return [[NSError alloc] initWithDomain:@"avt.avt" code:0 userInfo:@{
+		NSLocalizedDescriptionKey : message,
+	}];
 }
 
 @end

@@ -1,6 +1,6 @@
 #import "AVTRootVM.h"
 
-#import "AVTAPIController+Entities.h"
+#import "AVTAPIController.h"
 #import "AVTHomeVM.h"
 #import "AVTSelectVM.h"
 

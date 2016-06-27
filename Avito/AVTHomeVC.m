@@ -24,12 +24,12 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+	[self setEdgesForExtendedLayout:UIRectEdgeNone];
 
 	self.selectView = [[AVTSelectView alloc] initWithViewModel:self.viewModel.selectVM];
 	self.navigationItem.titleView = self.selectView;
 
 	self.view.backgroundColor = [UIColor grayColor];
-	[self setEdgesForExtendedLayout:UIRectEdgeNone];
 
 	[self.viewModel registerTableView:self.tableView];
 	[self.view addSubview:self.tableView];

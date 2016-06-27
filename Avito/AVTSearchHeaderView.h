@@ -3,5 +3,4 @@
 #import "AVTSearchVM.h"
 
 @interface AVTSearchHeaderView : AVTTableViewHeaderFooterView <AVTSearchVM *>
-
 @end

@@ -10,4 +10,9 @@
  **/
 - (RACSignal *)fetchGitHubItemsForQuery:(NSString *)query;
 
+/*! Image Data
+ *	\sendNext NSData, \sendError nil.
+ **/
+- (RACSignal *)fetchImageDataForURL:(NSURL *)imageURL;
+
 @end

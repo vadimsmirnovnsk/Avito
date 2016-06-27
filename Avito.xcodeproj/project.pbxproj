@@ -12,7 +12,6 @@
 		3028D8861D1DC30E00A6AC1B /* AVTRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8851D1DC30E00A6AC1B /* AVTRootVC.m */; };
 		3028D88B1D1DC30E00A6AC1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3028D88A1D1DC30E00A6AC1B /* Assets.xcassets */; };
 		3028D88E1D1DC30E00A6AC1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3028D88C1D1DC30E00A6AC1B /* LaunchScreen.storyboard */; };
-		3028D8991D1DC30E00A6AC1B /* AvitoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8981D1DC30E00A6AC1B /* AvitoTests.m */; };
 		3028D8AA1D1DC5D600A6AC1B /* AVTBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8A91D1DC5D600A6AC1B /* AVTBaseVC.m */; };
 		3028D8AD1D1DC73B00A6AC1B /* AVTBaseVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8AC1D1DC73B00A6AC1B /* AVTBaseVM.m */; };
 		3028D8B01D1DC76200A6AC1B /* AVTRootVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8AF1D1DC76200A6AC1B /* AVTRootVM.m */; };
@@ -61,7 +60,6 @@
 		3028D88D1D1DC30E00A6AC1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3028D88F1D1DC30E00A6AC1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3028D8941D1DC30E00A6AC1B /* AvitoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AvitoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3028D8981D1DC30E00A6AC1B /* AvitoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvitoTests.m; sourceTree = "<group>"; };
 		3028D89A1D1DC30E00A6AC1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3028D8A31D1DC40800A6AC1B /* Prefix-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Prefix-Header.h"; sourceTree = "<group>"; };
 		3028D8A81D1DC5D600A6AC1B /* AVTBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTBaseVC.h; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 		3028D8971D1DC30E00A6AC1B /* AvitoTests */ = {
 			isa = PBXGroup;
 			children = (
-				3028D8981D1DC30E00A6AC1B /* AvitoTests.m */,
 				3028D89A1D1DC30E00A6AC1B /* Info.plist */,
 			);
 			path = AvitoTests;
@@ -267,6 +264,10 @@
 		3028D8C21D1DCD5200A6AC1B /* SearchHeader */ = {
 			isa = PBXGroup;
 			children = (
+				3028D8ED1D1DE41E00A6AC1B /* AVTTextField.h */,
+				3028D8EE1D1DE41E00A6AC1B /* AVTTextField.m */,
+				3028D8CA1D1DD0C200A6AC1B /* AVTSearchVM.h */,
+				3028D8CB1D1DD0C200A6AC1B /* AVTSearchVM.m */,
 				3028D8C71D1DD08F00A6AC1B /* AVTSearchHeaderView.h */,
 				3028D8C81D1DD08F00A6AC1B /* AVTSearchHeaderView.m */,
 			);
@@ -287,7 +288,6 @@
 		3028D8DF1D1DD66800A6AC1B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3028D8F91D1FB28D00A6AC1B /* SearchView */,
 				3028D8C21D1DCD5200A6AC1B /* SearchHeader */,
 				3028D8C31D1DCD6200A6AC1B /* ResultCell */,
 				3028D8E71D1DDE4300A6AC1B /* AVTHomeVC.h */,
@@ -309,17 +309,6 @@
 				3028D8DD1D1DD61C00A6AC1B /* AVTSelectVM.m */,
 			);
 			name = SelectView;
-			sourceTree = "<group>";
-		};
-		3028D8F91D1FB28D00A6AC1B /* SearchView */ = {
-			isa = PBXGroup;
-			children = (
-				3028D8ED1D1DE41E00A6AC1B /* AVTTextField.h */,
-				3028D8EE1D1DE41E00A6AC1B /* AVTTextField.m */,
-				3028D8CA1D1DD0C200A6AC1B /* AVTSearchVM.h */,
-				3028D8CB1D1DD0C200A6AC1B /* AVTSearchVM.m */,
-			);
-			name = SearchView;
 			sourceTree = "<group>";
 		};
 		8BE8BB1C53CA34A70E0ABCDC /* Frameworks */ = {
@@ -560,7 +549,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3028D8991D1DC30E00A6AC1B /* AvitoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

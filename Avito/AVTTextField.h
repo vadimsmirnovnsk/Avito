@@ -1,6 +1,6 @@
 @class AVTSearchVM;
 
-@interface TKSTextField : UITextField
+@interface AVTTextField : UITextField
 
 @property (nonatomic, strong) AVTSearchVM *searchVM;
 

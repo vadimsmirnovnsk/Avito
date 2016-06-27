@@ -9,6 +9,7 @@ static NSString *const kAVTBaseURLStringGitHub = @"https://api.github.com/";
 
 @property (nonatomic, strong, readonly) AFHTTPRequestOperationManager *requestManagerApple;
 @property (nonatomic, strong, readonly) AFHTTPRequestOperationManager *requestManagerGitHub;
+@property (nonatomic, strong, readonly) NSCache *imageCache;
 
 @end
 
@@ -21,6 +22,8 @@ static NSString *const kAVTBaseURLStringGitHub = @"https://api.github.com/";
 
 	_requestManagerApple = [AVTAPIController requestManagerWithURLString:kAVTBaseURLStringApple];
 	_requestManagerGitHub = [AVTAPIController requestManagerWithURLString:kAVTBaseURLStringGitHub];
+	
+	_imageCache = [[NSCache alloc] init];
 
 	return self;
 }
@@ -65,6 +68,36 @@ static NSString *const kAVTBaseURLStringGitHub = @"https://api.github.com/";
 			[operation cancel];
 		}];
 	}];
+}
+
+- (NSData *_Nullable)cachedDataForKey:(NSString *)key
+{
+	NSCParameterAssert(key);
+
+	NSData *data = nil;
+
+	if (key.length > 0)
+	{
+		data = [self.imageCache objectForKey:key];
+	}
+
+	return data;
+}
+
+- (void)setCachedData:(NSData *)data forKey:(NSString *)key
+{
+	NSCParameterAssert(data);
+	NSCParameterAssert(key);
+
+	if (data.length > 0 && key.length > 0)
+	{
+		[self.imageCache setObject:data forKey:key];
+	}
+}
+
+- (void)cleanImagesCache
+{
+	[self.imageCache removeAllObjects];
 }
 
 - (AFHTTPRequestOperationManager *)requestManagerForService:(AVTService)service

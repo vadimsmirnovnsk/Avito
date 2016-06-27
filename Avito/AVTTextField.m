@@ -3,7 +3,7 @@
 #import "AVTSearchVM.h"
 #import "UIColor+DGSCustomColor.h"
 
-@implementation TKSTextField
+@implementation AVTTextField
 
 - (instancetype)init
 {
@@ -11,6 +11,7 @@
 	if (self == nil) return nil;
 
 	self.backgroundColor = [UIColor whiteColor];
+	
 	self.clearButtonMode = UITextFieldViewModeWhileEditing;
 	self.autocapitalizationType = UITextAutocapitalizationTypeNone;
 	self.autocorrectionType = UITextAutocorrectionTypeNo;

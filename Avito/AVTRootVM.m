@@ -31,4 +31,9 @@
 	_homeVM = [[AVTHomeVM alloc] initWithDataProvider:_apiController selectServiceSignal:selectServiceSignal];
 }
 
+- (void)cleanCache
+{
+	[self.apiController cleanImagesCache];
+}
+
 @end

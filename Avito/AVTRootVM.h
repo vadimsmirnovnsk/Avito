@@ -8,4 +8,6 @@
 @property (nonatomic, strong, readonly) AVTSelectVM *selectVM;
 @property (nonatomic, strong, readonly) AVTHomeVM *homeVM;
 
+- (void)cleanCache;
+
 @end

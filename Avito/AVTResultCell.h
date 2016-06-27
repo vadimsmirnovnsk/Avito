@@ -1,6 +1,6 @@
 #import "AVTTableViewCell.h"
 
-#import "AVTResultVM.h"
+#import "AVTResultCellVM.h"
 
-@interface AVTResultCell : AVTTableViewCell <AVTResultVM *>
+@interface AVTResultCell : AVTTableViewCell <AVTResultCellVM *>
 @end

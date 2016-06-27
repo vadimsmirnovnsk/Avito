@@ -1,6 +1,6 @@
 #import "AVTBaseVC.h"
 
-#import "AVTRootVM.h"
+@class AVTRootVM;
 
 @interface AVTRootVC : AVTBaseVC <AVTRootVM *>
 @end

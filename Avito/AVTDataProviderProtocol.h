@@ -3,11 +3,11 @@
 /*! iTunes items
  *	\sendNext @[AVTAppleItem]
  **/
-- (RACSignal *)fetchAppleItems;
+- (RACSignal *)fetchAppleItemsForQuery:(NSString *)query;
 
 /*! iTunes items
  *	\sendNext @[AVTGitHubItem]
  **/
-- (RACSignal *)fetchGitHubItems;
+- (RACSignal *)fetchGitHubItemsForQuery:(NSString *)query;
 
 @end

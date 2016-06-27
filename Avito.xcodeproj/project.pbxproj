@@ -27,6 +27,13 @@
 		3028D8D21D1DD1D200A6AC1B /* AVTResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8D11D1DD1D200A6AC1B /* AVTResultCell.m */; };
 		3028D8D51D1DD1F700A6AC1B /* AVTResultCellVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8D41D1DD1F700A6AC1B /* AVTResultCellVM.m */; };
 		3028D8DB1D1DD46D00A6AC1B /* AVTResultsVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8DA1D1DD46D00A6AC1B /* AVTResultsVM.m */; };
+		3028D8DE1D1DD61C00A6AC1B /* AVTSelectVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8DD1D1DD61C00A6AC1B /* AVTSelectVM.m */; };
+		3028D8E21D1DD98000A6AC1B /* AVTSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8E11D1DD98000A6AC1B /* AVTSelectView.m */; };
+		3028D8E61D1DDDCE00A6AC1B /* UIViewController+DGSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8E51D1DDDCE00A6AC1B /* UIViewController+DGSAdditions.m */; };
+		3028D8E91D1DDE4300A6AC1B /* AVTHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8E81D1DDE4300A6AC1B /* AVTHomeVC.m */; };
+		3028D8EC1D1DDE5500A6AC1B /* AVTHomeVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8EB1D1DDE5500A6AC1B /* AVTHomeVM.m */; };
+		3028D8EF1D1DE41E00A6AC1B /* AVTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8EE1D1DE41E00A6AC1B /* AVTTextField.m */; };
+		3028D8F21D1DE46600A6AC1B /* UIColor+DGSCustomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028D8F11D1DE46600A6AC1B /* UIColor+DGSCustomColor.m */; };
 		895B7CA96A097F415632A78B /* libPods-Avito.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0D7FB2D4B04C1A01BEE089 /* libPods-Avito.a */; };
 		EB8E607CAD4EB637C02E0EDB /* libPods-AvitoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A2B22E8BF0F044E728F027 /* libPods-AvitoTests.a */; };
 /* End PBXBuildFile section */
@@ -87,6 +94,20 @@
 		3028D8D41D1DD1F700A6AC1B /* AVTResultCellVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTResultCellVM.m; sourceTree = "<group>"; };
 		3028D8D91D1DD46D00A6AC1B /* AVTResultsVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTResultsVM.h; sourceTree = "<group>"; };
 		3028D8DA1D1DD46D00A6AC1B /* AVTResultsVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTResultsVM.m; sourceTree = "<group>"; };
+		3028D8DC1D1DD61C00A6AC1B /* AVTSelectVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTSelectVM.h; sourceTree = "<group>"; };
+		3028D8DD1D1DD61C00A6AC1B /* AVTSelectVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTSelectVM.m; sourceTree = "<group>"; };
+		3028D8E01D1DD98000A6AC1B /* AVTSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTSelectView.h; sourceTree = "<group>"; };
+		3028D8E11D1DD98000A6AC1B /* AVTSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTSelectView.m; sourceTree = "<group>"; };
+		3028D8E41D1DDDCE00A6AC1B /* UIViewController+DGSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DGSAdditions.h"; sourceTree = "<group>"; };
+		3028D8E51D1DDDCE00A6AC1B /* UIViewController+DGSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DGSAdditions.m"; sourceTree = "<group>"; };
+		3028D8E71D1DDE4300A6AC1B /* AVTHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTHomeVC.h; sourceTree = "<group>"; };
+		3028D8E81D1DDE4300A6AC1B /* AVTHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTHomeVC.m; sourceTree = "<group>"; };
+		3028D8EA1D1DDE5500A6AC1B /* AVTHomeVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTHomeVM.h; sourceTree = "<group>"; };
+		3028D8EB1D1DDE5500A6AC1B /* AVTHomeVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTHomeVM.m; sourceTree = "<group>"; };
+		3028D8ED1D1DE41E00A6AC1B /* AVTTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTTextField.h; sourceTree = "<group>"; };
+		3028D8EE1D1DE41E00A6AC1B /* AVTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTTextField.m; sourceTree = "<group>"; };
+		3028D8F01D1DE46600A6AC1B /* UIColor+DGSCustomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DGSCustomColor.h"; sourceTree = "<group>"; };
+		3028D8F11D1DE46600A6AC1B /* UIColor+DGSCustomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DGSCustomColor.m"; sourceTree = "<group>"; };
 		49A2B22E8BF0F044E728F027 /* libPods-AvitoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AvitoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0D7FB2D4B04C1A01BEE089 /* libPods-Avito.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Avito.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7B2E45B83B1D2A235009C4 /* Pods-AvitoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvitoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AvitoTests/Pods-AvitoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +203,7 @@
 		3028D8A51D1DC56D00A6AC1B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3028D8DF1D1DD66800A6AC1B /* Home */,
 				3028D8A61D1DC57700A6AC1B /* Root */,
 			);
 			name = Views;
@@ -190,16 +212,11 @@
 		3028D8A61D1DC57700A6AC1B /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				3028D8C21D1DCD5200A6AC1B /* SearchHeader */,
-				3028D8C31D1DCD6200A6AC1B /* ResultCell */,
+				3028D8E31D1DDCB000A6AC1B /* SelectView */,
 				3028D8841D1DC30E00A6AC1B /* AVTRootVC.h */,
 				3028D8851D1DC30E00A6AC1B /* AVTRootVC.m */,
 				3028D8AE1D1DC76200A6AC1B /* AVTRootVM.h */,
 				3028D8AF1D1DC76200A6AC1B /* AVTRootVM.m */,
-				3028D8D91D1DD46D00A6AC1B /* AVTResultsVM.h */,
-				3028D8DA1D1DD46D00A6AC1B /* AVTResultsVM.m */,
-				3028D8CA1D1DD0C200A6AC1B /* AVTSearchVM.h */,
-				3028D8CB1D1DD0C200A6AC1B /* AVTSearchVM.m */,
 			);
 			name = Root;
 			sourceTree = "<group>";
@@ -215,6 +232,10 @@
 				3028D8C51D1DCFE400A6AC1B /* AVTTableViewHeaderFooterView.m */,
 				3028D8CD1D1DD12100A6AC1B /* AVTTableViewCell.h */,
 				3028D8CE1D1DD12100A6AC1B /* AVTTableViewCell.m */,
+				3028D8F01D1DE46600A6AC1B /* UIColor+DGSCustomColor.h */,
+				3028D8F11D1DE46600A6AC1B /* UIColor+DGSCustomColor.m */,
+				3028D8E41D1DDDCE00A6AC1B /* UIViewController+DGSAdditions.h */,
+				3028D8E51D1DDDCE00A6AC1B /* UIViewController+DGSAdditions.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -261,6 +282,44 @@
 				3028D8D41D1DD1F700A6AC1B /* AVTResultCellVM.m */,
 			);
 			name = ResultCell;
+			sourceTree = "<group>";
+		};
+		3028D8DF1D1DD66800A6AC1B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3028D8F91D1FB28D00A6AC1B /* SearchView */,
+				3028D8C21D1DCD5200A6AC1B /* SearchHeader */,
+				3028D8C31D1DCD6200A6AC1B /* ResultCell */,
+				3028D8E71D1DDE4300A6AC1B /* AVTHomeVC.h */,
+				3028D8E81D1DDE4300A6AC1B /* AVTHomeVC.m */,
+				3028D8EA1D1DDE5500A6AC1B /* AVTHomeVM.h */,
+				3028D8EB1D1DDE5500A6AC1B /* AVTHomeVM.m */,
+				3028D8D91D1DD46D00A6AC1B /* AVTResultsVM.h */,
+				3028D8DA1D1DD46D00A6AC1B /* AVTResultsVM.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		3028D8E31D1DDCB000A6AC1B /* SelectView */ = {
+			isa = PBXGroup;
+			children = (
+				3028D8E01D1DD98000A6AC1B /* AVTSelectView.h */,
+				3028D8E11D1DD98000A6AC1B /* AVTSelectView.m */,
+				3028D8DC1D1DD61C00A6AC1B /* AVTSelectVM.h */,
+				3028D8DD1D1DD61C00A6AC1B /* AVTSelectVM.m */,
+			);
+			name = SelectView;
+			sourceTree = "<group>";
+		};
+		3028D8F91D1FB28D00A6AC1B /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				3028D8ED1D1DE41E00A6AC1B /* AVTTextField.h */,
+				3028D8EE1D1DE41E00A6AC1B /* AVTTextField.m */,
+				3028D8CA1D1DD0C200A6AC1B /* AVTSearchVM.h */,
+				3028D8CB1D1DD0C200A6AC1B /* AVTSearchVM.m */,
+			);
+			name = SearchView;
 			sourceTree = "<group>";
 		};
 		8BE8BB1C53CA34A70E0ABCDC /* Frameworks */ = {
@@ -470,11 +529,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3028D8DE1D1DD61C00A6AC1B /* AVTSelectVM.m in Sources */,
+				3028D8E21D1DD98000A6AC1B /* AVTSelectView.m in Sources */,
+				3028D8EF1D1DE41E00A6AC1B /* AVTTextField.m in Sources */,
 				3028D8B01D1DC76200A6AC1B /* AVTRootVM.m in Sources */,
 				3028D8C61D1DCFE400A6AC1B /* AVTTableViewHeaderFooterView.m in Sources */,
 				3028D8C11D1DCCD000A6AC1B /* AVTGitHubItem.m in Sources */,
 				3028D8AD1D1DC73B00A6AC1B /* AVTBaseVM.m in Sources */,
 				3028D8B41D1DC8BB00A6AC1B /* AVTAPIController.m in Sources */,
+				3028D8E91D1DDE4300A6AC1B /* AVTHomeVC.m in Sources */,
 				3028D8D51D1DD1F700A6AC1B /* AVTResultCellVM.m in Sources */,
 				3028D8CC1D1DD0C200A6AC1B /* AVTSearchVM.m in Sources */,
 				3028D8861D1DC30E00A6AC1B /* AVTRootVC.m in Sources */,
@@ -482,11 +545,14 @@
 				3028D8DB1D1DD46D00A6AC1B /* AVTResultsVM.m in Sources */,
 				3028D8D21D1DD1D200A6AC1B /* AVTResultCell.m in Sources */,
 				3028D8AA1D1DC5D600A6AC1B /* AVTBaseVC.m in Sources */,
+				3028D8EC1D1DDE5500A6AC1B /* AVTHomeVM.m in Sources */,
 				3028D8831D1DC30E00A6AC1B /* AppDelegate.m in Sources */,
 				3028D8C91D1DD08F00A6AC1B /* AVTSearchHeaderView.m in Sources */,
+				3028D8F21D1DE46600A6AC1B /* UIColor+DGSCustomColor.m in Sources */,
 				3028D8801D1DC30E00A6AC1B /* main.m in Sources */,
 				3028D8B81D1DCA0F00A6AC1B /* AVTAPIController+Entities.m in Sources */,
 				3028D8CF1D1DD12100A6AC1B /* AVTTableViewCell.m in Sources */,
+				3028D8E61D1DDDCE00A6AC1B /* UIViewController+DGSAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
